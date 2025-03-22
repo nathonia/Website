@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <form id="checkout-form">
+            <!-- Customer Information Section -->
+            <div class="section">
+                <h2>Billing Information</h2>
+                <label for="full-name">Name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="youremail@gmail.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="000 000 0000" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="123 Main St" required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Nelspruit" required>
+
+                <label for="zip-code">Zip Code</label>
+                <input type="text" id="zip-code" name="zip-code" placeholder="0000" required>
+
+             
+                
+
+            <!-- Payment Methods Section -->
+            <div class="section">
+                <h2>Payment Method</h2>
+                <div class="payment-methods">
+                    <label for="credit-card">
+                        <input type="radio" id="credit-card" name="payment-method" value="credit-card" required>
+                        Credit Card/ Debit Card
+                    </label>
+                    
+                    <label for="apple-pay">
+                        <input type="radio" id="apple-pay" name="payment-method" value="apple-pay">
+                        EFT
+                    </label>
+                </div>
+                <div id="credit-card-details" class="payment-details" style="display: none;">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 1234 5678" required>
+
+                    <label for="expiration-date">Expiration Date</label>
+                    <input type="month" id="expiration-date" name="expiration-date" required>
+
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                </div>
+            </div>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
